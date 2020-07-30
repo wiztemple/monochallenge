@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mono Challenge</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">
+        <nav class="navbar white fixed-top">
+          <div class="container-fluid">
+            <div class="brand">
+              <a href="index.html" class="navbar-item">
+                <span>MonoClient</span>
+              </a>
+              <a
+                role="button"
+                class="navbar-burger burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="navMenu"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+              <div class="navbar-left">
+                <a class="navbar-item" href="#"></a>
+                <div class="navbar-item inject-search"></div>
+              </div>
+              <div class="navbar-right">
+                <div class="navbar-item">
+                  <button
+                    class="button button-blue feint-button button-rounded button-click"
+                  >
+                    Connect to Mono Widget
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="banner">
+          <h1 class="text-center">Check your credit worthiness</h1>
+          <div>
+            <button
+              class="button button-dark-blue button-rounded connect-button"
+            >
+              Launch mono connect
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://connect.withmono.com/connect.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
