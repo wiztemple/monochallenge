@@ -193,6 +193,9 @@ body {
   .navbar {
     width: 100%;
   }
+  .banner-text {
+    font-size: 2rem;
+  }
   .navbar > .container {
     display: block;
   }
