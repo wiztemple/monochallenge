@@ -220,15 +220,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* .navbar.white .navbar-left > a.navbar-item,
-  .navbar.white .navbar-right > a.navbar-item,
-  .navbar.white .navbar-left > .navbar-link,
-  .navbar.white .navbar-right > .navbar-link {
-    color: rgb(124, 120, 120);
-    border-bottom: 2px solid transparent;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-  } */
 
   .navbar.white a.navbar-item.active {
     color: #1f65e6;
@@ -332,7 +323,7 @@ body {
   }
 }
 
-.col-1,
+/* .col-1,
 .col-2,
 .col-3,
 .col-4,
@@ -410,7 +401,7 @@ body {
     flex: 0 0 100%;
     max-width: 100%;
   }
-}
+} */
 
 @keyframes transitionIn {
   from {

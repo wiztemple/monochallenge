@@ -118,12 +118,12 @@ connectButton.addEventListener('click', (event) => {
         if (payableAmount > Number(amountRequested)) {
           const creditModal = document.querySelector('.credit-modal');
           const msgText = 'Based on our calculation, you are eligible to borrow N'
-           document.querySelector('.amountSpan').innerText = msgText + amountRequested.toString()
+           document.querySelector('.amountSpan').innerText = msgText + amountRequested.toString().toLocaleString()
            creditModal.style.display = 'block';
         } else {
           const creditModal = document.querySelector('.credit-modal');
           const msgText = `Sorry, you can't borrow N${amountRequested.toString()}, however, you can borrow up to N${payableAmount}`
-           document.querySelector('.amountSpan').innerText = msgText + amountRequested.toString()
+           document.querySelector('.amountSpan').innerText = msgText + amountRequested.toString().toLocaleString()
            creditModal.style.display = 'block';
         }
         
@@ -132,9 +132,8 @@ connectButton.addEventListener('click', (event) => {
         
        
     },
-    onClose: () => {
-      alert('user cancelled the authentication');
-    },
+    onClose: () => console.log('connection closed')
+    
   };
   
   const connect = new Connect(pk, options);
