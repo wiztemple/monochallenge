@@ -11,7 +11,6 @@ buttons.forEach((button) => {
     modal.style.display = 'block';
   });
 });
-
 cancelButtons.forEach((cancelButton) => {
   cancelButton.addEventListener('click', () => {
     modals.forEach((modal) => {
@@ -29,8 +28,6 @@ document.addEventListener('click', (e) => {
     }
   });
 });
-
-
 const saveBtn = document.querySelector('.save-button');
 
 saveBtn.addEventListener('click', () => {
@@ -95,13 +92,13 @@ connectButton.addEventListener('click', (e) => {
           const creditModal = document.querySelector('.credit-modal');
           document.querySelector('.loaner').innerHTML = localStorage.getItem('username');
           const msgText = 'Based on our calculation, you are eligible to borrow N'
-           document.querySelector('.amountSpan').innerText = msgText + amountRequested.toString()
+           document.querySelector('.amountSpan').innerText = msgText + amountRequested
            creditModal.style.display = 'block';
         } else {
           const creditModal = document.querySelector('.credit-modal');
           document.querySelector('.loaner').innerHTML = localStorage.getItem('username');
-          const msgText = `Sorry, you can't borrow N${amountRequested.toString()}, however, you can borrow up to N${Number(payableAmount)}`
-           document.querySelector('.amountSpan').innerText = msgText + amountRequested.toString()
+          const msgText = `Sorry, you can't borrow N${amountRequested}, however, you can borrow up to N${Number(payableAmount)}`
+           document.querySelector('.amountSpan').innerText = msgText + amountRequested
            creditModal.style.display = 'block';
         }
         connect.close();
@@ -110,7 +107,6 @@ connectButton.addEventListener('click', (e) => {
     onClose: () => console.log('connection closed')
     
   };
-  
   const connect = new Connect(pk, options);
   connect.setup();
   connect.open();
