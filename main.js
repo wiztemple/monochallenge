@@ -92,12 +92,12 @@ connectButton.addEventListener('click', (e) => {
           const creditModal = document.querySelector('.credit-modal');
           document.querySelector('.loaner').innerHTML = localStorage.getItem('username');
           const msgText = 'Based on our calculation, you are eligible to borrow N'
-           document.querySelector('.amountSpan').innerHTML = msgText + amountRequested.toString()
+           document.querySelector('.amountSpan').innerHTML = msgText + amountRequested
            creditModal.style.display = 'block';
         } else {
           const creditModal = document.querySelector('.credit-modal');
           document.querySelector('.loaner').innerHTML = localStorage.getItem('username');
-          const msgText = `Sorry, you can't borrow N${amountRequested}, however, you can borrow up to N${payableAmount.toString()}`
+          const msgText = `Sorry, you can't borrow N${amountRequested}, however, you can borrow up to N${payableAmount || 0}`
            document.querySelector('.amountSpan').innerHTML = msgText + amountRequested
            creditModal.style.display = 'block';
         }
