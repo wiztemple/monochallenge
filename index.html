@@ -40,8 +40,9 @@
                 <div class="navbar-item">
                   <button
                     class="button button-blue feint-button button-rounded button-click"
+                    data-target="1"
                   >
-                    Connect to Mono Widget
+                    SIGN UP
                   </button>
                 </div>
               </div>
@@ -49,15 +50,109 @@
           </div>
         </nav>
         <div class="banner">
-          <h1 class="text-center">Check your credit worthiness</h1>
+          <h1 class="text-center banner-text">Check your credit worthiness</h1>
           <div>
             <button
-              class="button button-dark-blue button-rounded connect-button"
+              class="button button-dark-blue button-rounded connect-button mt-20"
             >
               Launch mono connect
             </button>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="modal" data-id="1">
+      <div class="modal-content-sm">
+        <div class="modal-header">
+          <h2 class="text-center">Mono Client</h2>
+          <p class="f-14 text-center pd-20">
+            How much do you want to borrow?
+          </p>
+          <span class="close-modal">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 1L1 11"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M1 1L11 11"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="flex-start"></div>
+            <div>
+              <input
+                id="userName"
+                class="input-field mb-10"
+                type="text"
+                placeholder="username"
+              />
+            </div>
+            <div>
+              <input
+              id="userAmount"
+                class="input-field mt-20"
+                type="text"
+                placeholder="amount"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <div class="flex-start ml-10 py-30">
+            <button class="button button-dark-blue button-shadow button-block save-button">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal credit-modal" data-id="2">
+      <div class="modal-content-sm">
+        <div class="modal-header">
+          <h1 class="text-center">Hello Sullivan</h1>
+          <p class="f-14 text-center pd-20">
+            <span class="amountSpan"></span>
+          </p>
+          <span class="close-modal">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 1L1 11"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M1 1L11 11"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </div>
+ 
+        
       </div>
     </div>
     <script src="https://connect.withmono.com/connect.js"></script>
