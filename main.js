@@ -48,7 +48,7 @@ connectButton.addEventListener('click', (e) => {
   const pk = 'test_pk_Cv8zpNgCtMtqiZoh4Ewg'; // your test public key
   const options = {
     onSuccess: (response) => {
-      console.log(JSON.stringify(response.code));
+      // console.log(JSON.stringify(response.code));
       fetch('https://api.withmono.com/account/auth', {
         method: 'POST',
         credentials: 'same-origin',
@@ -68,7 +68,7 @@ connectButton.addEventListener('click', (e) => {
           },
         } )
         const debitsJson = await debits.json();
-        console.log(debitsJson, 'debits json')
+        // console.log(debitsJson, 'debits json')
         const credits =  await fetch(`https://api.withmono.com/accounts/${data.id}/credits`, {
           method: 'GET',
           headers: {
@@ -77,7 +77,7 @@ connectButton.addEventListener('click', (e) => {
           },
         } )
         const creditsJson = await credits.json();
-        console.log(creditsJson, 'credits json')
+        // console.log(creditsJson, 'credits json')
         const userBalance =  await fetch(`https://api.withmono.com/accounts/${data.id}`, {
           method: 'GET',
           headers: {
