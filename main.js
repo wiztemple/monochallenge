@@ -41,6 +41,8 @@ saveBtn.addEventListener('click', () => {
 })
 const connectButton = document.querySelector('.connect-button');
 const dataId = '';
+const financial = (x) => Number.parseFloat(x).toFixed(0);
+const localize = (num) => Number(num).toLocaleString();
 
 connectButton.addEventListener('click', (e) => {
   const pk = 'test_pk_Cv8zpNgCtMtqiZoh4Ewg'; // your test public key
@@ -92,13 +94,13 @@ connectButton.addEventListener('click', (e) => {
           const creditModal = document.querySelector('.credit-modal');
           document.querySelector('.loaner').innerHTML = localStorage.getItem('username');
           const msgText = 'Based on our calculation, you are eligible to borrow N'
-           document.querySelector('.amountSpan').innerHTML = msgText + amountRequested
+           document.querySelector('.amountSpan').innerHTML = msgText + localize(amountRequested)
            creditModal.style.display = 'block';
         } else {
           const creditModal = document.querySelector('.credit-modal');
           document.querySelector('.loaner').innerHTML = localStorage.getItem('username');
-          const msgText = `Sorry, you can't borrow N${amountRequested}, however, you can borrow up to N${payableAmount || 0}`
-           document.querySelector('.amountSpan').innerHTML = msgText + amountRequested
+          const msgText = `Sorry, you can't borrow N${localize(amountRequested)}, however, you can borrow up to N${localize(payableAmount) || 0}`
+           document.querySelector('.amountSpan').innerHTML = msgText + localize(amountRequested)
            creditModal.style.display = 'block';
         }
         connect.close();
