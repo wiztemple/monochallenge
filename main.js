@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 const modals = document.querySelectorAll('.modal');
+const mainModal = document.getElementById('modal');
 const buttons = document.querySelectorAll('.button-click');
 const cancelButtons = document.querySelectorAll('.close-modal');
 
@@ -30,21 +31,25 @@ document.addEventListener('click', (e) => {
 });
 const saveBtn = document.querySelector('.save-button');
 
-saveBtn.addEventListener('click', () => {
-  const userName = document.getElementById('userName').value;
-  const userAmount = document.getElementById('userAmount').value;
-  localStorage.setItem('username', userName);
-  localStorage.setItem('userAmount', userAmount);
-  modals.forEach((modal) => {
-    modal.style.display = 'none';
-  });
-})
+// saveBtn.addEventListener('click', () => {
+//   const userName = document.getElementById('userName').value;
+//   const userAmount = document.getElementById('userAmount').value;
+//   localStorage.setItem('username', userName);
+//   localStorage.setItem('userAmount', userAmount);
+//   modals.forEach((modal) => {
+//     modal.style.display = 'none';
+//   });
+// })
 const connectButton = document.querySelector('.connect-button');
 const dataId = '';
 const financial = (x) => Number.parseFloat(x).toFixed(0);
 const localize = (num) => Number(num).toLocaleString();
 
-connectButton.addEventListener('click', (e) => {
+saveBtn.addEventListener('click', (e) => {
+  const userName = document.getElementById('userName').value;
+  const userAmount = document.getElementById('userAmount').value;
+  localStorage.setItem('username', userName);
+  localStorage.setItem('userAmount', userAmount);
   const pk = 'test_pk_Cv8zpNgCtMtqiZoh4Ewg'; // your test public key
   const options = {
     onSuccess: (response) => {
@@ -102,6 +107,9 @@ connectButton.addEventListener('click', (e) => {
           const msgText = `Sorry, you can't borrow N${localize(amountRequested)}, however, you can borrow up to N${localize(payableAmount) || 0}`
            document.querySelector('.amountSpan').innerHTML = msgText + localize(amountRequested)
            creditModal.style.display = 'block';
+        }
+        if(mainModal.style.display = 'block') {
+          mainModal.style.display = 'none';
         }
         connect.close();
         });
